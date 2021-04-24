@@ -19,7 +19,6 @@ class AppInitAsmTransform extends BaseAsmTransform {
     private File mAppInitManagerCtClassDest
     private File mApplicationCtClassDest
 
-    private File mAppInitLogDir
     private String mApplicationEntryName
     private String mApplicationEntryNameWithClass
     private AppInitExtension mAppInitExtension

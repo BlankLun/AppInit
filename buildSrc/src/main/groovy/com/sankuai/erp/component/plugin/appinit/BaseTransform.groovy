@@ -34,6 +34,7 @@ abstract class BaseTransform extends Transform {
     protected GroovyClassLoader mUrlClassLoader
     protected String mVariant
     protected StringBuilder mLogSb
+    protected File mAppInitLogDir
 
     BaseTransform(Project project) {
         mProject = project
