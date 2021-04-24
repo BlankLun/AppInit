@@ -26,12 +26,12 @@ class AppInitPlugin extends BaseAptPlugin {
 
     @Override
     protected String getApiPomArtifactId() {
-        return "appinit-api"
+        return "flow-api"
     }
 
     @Override
     protected String getCompilerPomArtifactId() {
-        return "appinit-compiler"
+        return "flow-compiler"
     }
 
     @Override
