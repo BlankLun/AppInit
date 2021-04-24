@@ -1,8 +1,4 @@
-// core
-include ':api', ':compiler', ':common'
 
-// demo
-include ':app', ':module1', ':module2', ':module3'
-project(':app').projectDir = new File("demo/app")
-project(':module1').projectDir = new File("demo/module1")
-project(':module3').projectDir = new File("demo/module3")
+apply from: "settings-flow-framework.gradle"
+
+apply from: "settings-demo.gradle"

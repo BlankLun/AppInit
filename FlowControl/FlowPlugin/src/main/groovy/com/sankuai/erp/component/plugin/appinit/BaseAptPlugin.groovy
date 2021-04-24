@@ -81,7 +81,7 @@ abstract class BaseAptPlugin implements Plugin<Project> {
     private void addDependencies() {
         if (isDebugApt()) {
             info "调试 Apt"
-            mProject.dependencies.add('implementation', mProject.project(':api'))
+            mProject.dependencies.add('implementation', mProject.project(':FlowApi'))
             mProject.dependencies.add('annotationProcessor', mProject.project(':compiler'))
             if (hasKotlinAndroidPlugin(mProject)) {
                 mProject.dependencies.add('kapt', mProject.project(':compiler'))

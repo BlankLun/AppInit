@@ -19,14 +19,14 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.sankuai.waimai.router:plugin:1.1.0"
 
-        if (project.findProject(':buildSrc') == null) {
-            classpath "com.sankuai.erp.component:appinit-plugin:1.0.6"
-        }
+//        if (project.findProject(':buildSrc') == null) {
+//            classpath "com.sankuai.erp.component:appinit-plugin:1.0.6"
+//        }
     }
 }
 
 subprojects { project ->
-    def libProjectList = ['common', 'api', 'compiler', 'buildSrc']
+    def libProjectList = ['common', 'FlowApi', 'compiler', 'buildSrc']
     if (libProjectList.contains(project.name)) {
         return
     }
