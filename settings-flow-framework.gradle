@@ -1,10 +1,8 @@
-// core
-include ':common'
-//include ':FlowCommon'
-//project(":FlowCommon").projectDir = new File("Framework/FlowCommon")
+include ':FlowCommon'
+project(":FlowCommon").projectDir = new File("FlowControl/FlowCommon")
 include ':FlowCompiler'
 project(":FlowCompiler").projectDir = new File("FlowControl/FlowCompiler")
 include ':FlowApi'
 project(":FlowApi").projectDir = new File("FlowControl/FlowApi")
-//include ':FlowPlugin'
-//project(":FlowPlugin").projectDir = new File("Framework/FlowPlugin")
+include ':FlowPlugin'
+project(":FlowPlugin").projectDir = new File("FlowControl/FlowPlugin")

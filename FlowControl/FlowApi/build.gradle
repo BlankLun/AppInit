@@ -6,6 +6,6 @@ dependencies {
     if (project.ext.isPublish) {
         api "com.sankuai.erp.component:appinit-common:${rootProject.project(':common').POM_VERSION_NAME}"
     } else {
-        api project(':common')
+        api project(':FlowCommon')
     }
 }

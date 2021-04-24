@@ -36,7 +36,7 @@ dependencies {
 sourceSets {
     println "依赖 plugin 源码"
     main {
-        java.srcDirs += "${project.rootDir.parent}/common/src/main/java"
+        java.srcDirs += "${project.rootDir.parent}/FlowControl/FlowCommon/src/main/java"
         java.srcDirs += "${project.rootDir.parent}/FlowControl/FlowPlugin/src/main/java"
         groovy.srcDirs += "${project.rootDir.parent}/FlowControl/FlowPlugin/src/main/groovy"
         resources.srcDirs += "${project.rootDir.parent}/FlowControl/FlowPlugin/src/main/resources"
