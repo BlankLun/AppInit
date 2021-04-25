@@ -166,9 +166,6 @@ abstract class BaseTransform extends Transform {
         mUrlClassLoader.addClasspath(jarInput.file.absolutePath)
 
         String destJarName = getDestJarName(jarInput)
-        // /Users/wanghao/git/AndroidStudio/xmd/erp-components-android/appinit/demo/app/build/intermediates/transforms/AppInit/vipBaidu/debug/0.jar
-        // /Users/wanghao/git/AndroidStudio/xmd/erp-components-android/appinit/demo/app/build/intermediates/transforms/AppInit/baidu/debug/0.jar
-        // /Users/wanghao/git/AndroidStudio/xmd/erp-components-android/appinit/demo/app/build/intermediates/transforms/AppInit/debug/0.jar
         File destJarFile = transformInvocation.outputProvider.getContentLocation(destJarName, jarInput.contentTypes, jarInput.scopes, Format.JAR)
 
         if (shouldScanJar(jarInput)) {
@@ -194,9 +191,6 @@ abstract class BaseTransform extends Transform {
 
     protected void handleDirectoryInput(DirectoryInput directoryInput, TransformInvocation transformInvocation) {
         mUrlClassLoader.addClasspath(directoryInput.file.absolutePath)
-        // /Users/wanghao/git/AndroidStudio/xmd/erp-components-android/appinit/demo/app/build/intermediates/transforms/AppInit/vipXiaomi/debug/18
-        // /Users/wanghao/git/AndroidStudio/xmd/erp-components-android/appinit/demo/app/build/intermediates/transforms/AppInit/baidu/debug/18
-        // /Users/wanghao/git/AndroidStudio/xmd/erp-components-android/appinit/demo/app/build/intermediates/transforms/AppInit/debug/18
         File destDir = transformInvocation.outputProvider.getContentLocation(directoryInput.name, directoryInput.contentTypes, directoryInput.scopes, Format.DIRECTORY)
 
         directoryInput.file.eachFileRecurse(FileType.FILES) { File file ->

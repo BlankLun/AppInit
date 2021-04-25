@@ -1,5 +1,6 @@
 package com.sankuai.erp.component.plugin.appinit
 
+import com.sankuai.erp.component.appinit.common.ModuleConsts
 import org.objectweb.asm.*
 
 /**
@@ -75,9 +76,9 @@ class ApplicationAsmKnife {
         @Override
         void visitInsn(int opcode) {
             if (opcode == Opcodes.RETURN) {
-                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "com/sankuai/erp/component/appinit/api/AppInitManager", "get", "()Lcom/sankuai/erp/component/appinit/api/AppInitManager;", false)
+                mv.visitMethodInsn(Opcodes.INVOKESTATIC, ModuleConsts.APP_INIT_MANAGER_SLASH, "get", "()L${ModuleConsts.APP_INIT_MANAGER_SLASH};", false)
                 mv.visitVarInsn(Opcodes.ALOAD, 1)
-                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "com/sankuai/erp/component/appinit/api/AppInitManager", 'onConfigurationChanged', "(Landroid/content/res/Configuration;)V", false)
+                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, ModuleConsts.APP_INIT_MANAGER_SLASH, 'onConfigurationChanged', "(Landroid/content/res/Configuration;)V", false)
             }
             super.visitInsn(opcode)
         }
@@ -106,9 +107,9 @@ class ApplicationAsmKnife {
         @Override
         void visitInsn(int opcode) {
             if (opcode == Opcodes.RETURN) {
-                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "com/sankuai/erp/component/appinit/api/AppInitManager", "get", "()Lcom/sankuai/erp/component/appinit/api/AppInitManager;", false)
+                mv.visitMethodInsn(Opcodes.INVOKESTATIC, ModuleConsts.APP_INIT_MANAGER_SLASH, "get", "()L${ModuleConsts.APP_INIT_MANAGER_SLASH};", false)
                 mv.visitVarInsn(Opcodes.ILOAD, 1)
-                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "com/sankuai/erp/component/appinit/api/AppInitManager", 'onTrimMemory', "(I)V", false)
+                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, ModuleConsts.APP_INIT_MANAGER_SLASH, 'onTrimMemory', "(I)V", false)
             }
             super.visitInsn(opcode)
         }
@@ -138,8 +139,8 @@ class ApplicationAsmKnife {
         @Override
         void visitInsn(int opcode) {
             if (opcode == Opcodes.RETURN) {
-                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "com/sankuai/erp/component/appinit/api/AppInitManager", "get", "()Lcom/sankuai/erp/component/appinit/api/AppInitManager;", false)
-                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "com/sankuai/erp/component/appinit/api/AppInitManager", mName, "()V", false)
+                mv.visitMethodInsn(Opcodes.INVOKESTATIC, ModuleConsts.APP_INIT_MANAGER_SLASH, "get", "()L${ModuleConsts.APP_INIT_MANAGER_SLASH};", false)
+                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, ModuleConsts.APP_INIT_MANAGER_SLASH, mName, "()V", false)
             }
             super.visitInsn(opcode)
         }

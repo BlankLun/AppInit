@@ -56,14 +56,14 @@ class AppInitManagerAsmKnife {
                 } else {
                     mv.visitInsn(Opcodes.ICONST_0)
                 }
-                mv.visitFieldInsn(Opcodes.PUTFIELD, "com/sankuai/erp/component/appinit/api/AppInitManager", "mAbortOnNotExist", "Z")
+                mv.visitFieldInsn(Opcodes.PUTFIELD, ModuleConsts.APP_INIT_MANAGER_SLASH, ModuleConsts.FIELD_INJECT_ABORT_ON_NOT_EXIST, "Z")
 
                 // 注入 mChildInitTableList
                 String childInitTableEntryName
                 mChildInitTableList.each { childInitTable ->
                     childInitTableEntryName = BaseTransform.convertCanonicalNameToEntryName(childInitTable.class.name, false)
                     mv.visitVarInsn(Opcodes.ALOAD, 0)
-                    mv.visitFieldInsn(Opcodes.GETFIELD, "com/sankuai/erp/component/appinit/api/AppInitManager", "mChildInitTableList", "Ljava/util/List;")
+                    mv.visitFieldInsn(Opcodes.GETFIELD, ModuleConsts.APP_INIT_MANAGER_SLASH, "mChildInitTableList", "Ljava/util/List;")
                     mv.visitTypeInsn(Opcodes.NEW, childInitTableEntryName)
                     mv.visitInsn(Opcodes.DUP)
                     mv.visitIntInsn(Opcodes.SIPUSH, childInitTable.priority)
@@ -92,8 +92,8 @@ class AppInitManagerAsmKnife {
                     appInitEntryName = BaseTransform.convertCanonicalNameToEntryName(appInitItem.appInitClassName, false)
 
                     mv.visitVarInsn(Opcodes.ALOAD, 0)
-                    mv.visitFieldInsn(Opcodes.GETFIELD, "com/sankuai/erp/component/appinit/api/AppInitManager", "mAppInitItemList", "Ljava/util/List;")
-                    mv.visitTypeInsn(Opcodes.NEW, "com/sankuai/erp/component/appinit/common/AppInitItem")
+                    mv.visitFieldInsn(Opcodes.GETFIELD, ModuleConsts.APP_INIT_MANAGER_SLASH, "mAppInitItemList", "Ljava/util/List;")
+                    mv.visitTypeInsn(Opcodes.NEW, ModuleConsts.APP_INIT_ITEM_SLASH)
                     mv.visitInsn(Opcodes.DUP)
                     mv.visitTypeInsn(Opcodes.NEW, appInitEntryName)
                     mv.visitInsn(Opcodes.DUP)
@@ -105,8 +105,8 @@ class AppInitManagerAsmKnife {
                     mv.visitLdcInsn(appInitItem.description)
                     mv.visitLdcInsn(appInitItem.onlyForDebug.toString())
                     mv.visitLdcInsn(appInitItem.moduleCoordinate)
-                    mv.visitMethodInsn(Opcodes.INVOKESPECIAL, "com/sankuai/erp/component/appinit/common/AppInitItem", "<init>",
-                            "(Lcom/sankuai/erp/component/appinit/common/IAppInit;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+                    mv.visitMethodInsn(Opcodes.INVOKESPECIAL, ModuleConsts.APP_INIT_ITEM_SLASH, "<init>",
+                            "(L${ModuleConsts.APP_INIT_INTERFACE_SLASH};IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
                             false)
                     mv.visitMethodInsn(Opcodes.INVOKEINTERFACE, "java/util/List", "add", "(Ljava/lang/Object;)Z", true)
                     mv.visitInsn(Opcodes.POP)
