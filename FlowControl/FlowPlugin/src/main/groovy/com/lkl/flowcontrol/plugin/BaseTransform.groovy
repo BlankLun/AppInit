@@ -1,4 +1,4 @@
-package com.sankuai.erp.component.plugin.appinit
+package com.lkl.flowcontrol.plugin
 
 import com.android.SdkConstants
 import com.android.build.api.transform.*

@@ -40,8 +40,8 @@ subprojects { project ->
     apply plugin: 'kotlin-android'
     apply plugin: 'kotlin-android-extensions'
     apply plugin: 'kotlin-kapt'
-    // 应用 AppInit 插件。如果有用到 Kotlin，需要放到 Kotlin 插件之后
-    apply plugin: 'appinit-plugin'
+    // 应用 FlowControl 插件。如果有用到 Kotlin，需要放到 Kotlin 插件之后
+    apply plugin: 'flow-control-plugin'
 
     // 测试多 flavor 的情况
 //    android {

@@ -1,4 +1,5 @@
-package com.sankuai.erp.component.plugin.appinit
+package com.lkl.flowcontrol.plugin
+
 
 import org.gradle.api.Project
 import org.objectweb.asm.ClassReader

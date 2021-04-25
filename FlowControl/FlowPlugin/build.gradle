@@ -4,12 +4,12 @@ def isNotStandalone = project.parent != null
 def isDebugPlugin = false
 
 if (isNotStandalone) {
-    isDebugPlugin = DEBUG_APP_INIT_APT
+    isDebugPlugin = DEBUG_FLOW_CONTROL_APT
     apply from: rootProject.file('publish_module_config.gradle')
 } else {
     Properties props = new Properties()
     props.load(rootProject.file('../gradle.properties').newDataInputStream())
-    isDebugPlugin = props.getProperty('DEBUG_APP_INIT_APT')
+    isDebugPlugin = props.getProperty('DEBUG_FLOW_CONTROL_APT')
 
     repositories {
         mavenLocal()

@@ -1,4 +1,4 @@
-package com.sankuai.erp.component.plugin.appinit
+package com.lkl.flowcontrol.plugin
 
 import com.sankuai.erp.component.appinit.common.ILogger
 import org.gradle.api.Project
@@ -30,12 +30,12 @@ class Logger implements ILogger {
 
     @Override
     void d(String msg) {
-        println "「AppInitPlugin」「${mProject.path}」=> ${msg}"
+        println "「FlowControlPlugin」「${mProject.path}」=> ${msg}"
     }
 
 
     @Override
     void e(String msg) {
-        mProject.logger.error "「AppInitPlugin」「${mProject.path}」=> ${msg}"
+        mProject.logger.error "「FlowControlPlugin」「${mProject.path}」=> ${msg}"
     }
 }

@@ -1,12 +1,14 @@
-package com.sankuai.erp.component.plugin.appinit
+package com.lkl.flowcontrol.plugin
 
+import com.lkl.flowcontrol.plugin.appinit.AppInitAsmTransform
+import com.lkl.flowcontrol.plugin.appinit.AppInitExtension
 import com.sankuai.erp.component.appinit.common.AppInitLogger
 import com.sankuai.erp.component.appinit.common.ModuleConsts
 
 /**
  * 「app 初始化、多模块初始化」插件
  */
-class AppInitPlugin extends BaseAptPlugin {
+class FlowControlPlugin extends BaseAptPlugin {
     private static final String VERSION_NAME = "1.0.6"
 
     @Override
@@ -14,14 +16,13 @@ class AppInitPlugin extends BaseAptPlugin {
         AppInitLogger.sLogger = new Logger(mProject)
         mProject.extensions.create('appInit', AppInitExtension)
 
-//        mProject.android.registerTransform(new AppInitJavassistTransform(mProject))
         mProject.android.registerTransform(new AppInitAsmTransform(mProject))
     }
 
     @Override
     protected String getAptDebugKey() {
         // gradle.properties 中添加该属性来配置是否处于调试 apt 模式
-        return "DEBUG_APP_INIT_APT"
+        return "DEBUG_FLOW_CONTROL_APT"
     }
 
     @Override

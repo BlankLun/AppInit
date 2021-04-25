@@ -24,7 +24,7 @@ if [[ $# != 0 ]]; then
     sleep 20
 fi
 
-sed -i -e "s/DEBUG_APP_INIT_APT=true/DEBUG_APP_INIT_APT=false/" gradle.properties
+sed -i -e "s/DEBUG_FLOW_CONTROL_APT=true/DEBUG_FLOW_CONTROL_APT=false/" gradle.properties
 ./gradlew :buildSrc:clean :buildSrc:build :buildSrc:${RELEASE_TASK} -PpublishLib
 
 if [[ $# != 0 ]]; then

@@ -1,5 +1,6 @@
-package com.sankuai.erp.component.plugin.appinit
+package com.lkl.flowcontrol.plugin.appinit
 
+import com.lkl.flowcontrol.plugin.BaseAsmTransform
 import com.sankuai.erp.component.appinit.common.*
 import org.gradle.api.Project
 import org.objectweb.asm.ClassWriter

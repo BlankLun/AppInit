@@ -1,4 +1,4 @@
-package com.sankuai.erp.component.plugin.appinit
+package com.lkl.flowcontrol.plugin
 
 import com.sankuai.erp.component.appinit.common.AppInitCommonUtils
 import org.gradle.api.Plugin
