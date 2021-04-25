@@ -1,4 +1,4 @@
-package com.sankuai.erp.component.appinit.compiler;
+package com.lkl.flowcontrol.compiler;
 
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.JavaFile;
