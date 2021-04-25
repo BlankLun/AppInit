@@ -5,7 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import com.sankuai.erp.component.appinit.api.AppInitManager;
+import com.lkl.flowcontrol.api.appinit.AppInitManager;
 import com.sankuai.erp.component.appinitdemo.App;
 import com.sankuai.erp.component.appinitdemo.R;
 import com.sankuai.waimai.router.Router;

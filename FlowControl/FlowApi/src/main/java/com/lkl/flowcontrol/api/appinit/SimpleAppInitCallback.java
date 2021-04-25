@@ -1,4 +1,4 @@
-package com.sankuai.erp.component.appinit.api;
+package com.lkl.flowcontrol.api.appinit;
 
 import com.sankuai.erp.component.appinit.common.AppInitCallback;
 import com.sankuai.erp.component.appinit.common.AppInitItem;

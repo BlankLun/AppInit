@@ -1,6 +1,6 @@
 package com.sankuai.erp.component.appinitdemo.init;
 
-import com.sankuai.erp.component.appinit.api.SimpleAppInit;
+import com.lkl.flowcontrol.api.appinit.SimpleAppInit;
 import com.sankuai.erp.component.appinit.common.AppInit;
 import com.sankuai.erp.component.appinit.common.AppInitLogger;
 import com.sankuai.waimai.router.Router;

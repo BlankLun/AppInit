@@ -1,4 +1,4 @@
-package com.sankuai.erp.component.appinit.api;
+package com.lkl.flowcontrol.api.appinit;
 
 import android.app.ActivityManager;
 import android.content.Context;

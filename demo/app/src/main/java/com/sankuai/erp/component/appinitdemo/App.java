@@ -4,9 +4,9 @@ import android.content.res.Configuration;
 import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
-import com.sankuai.erp.component.appinit.api.AppInitApiUtils;
-import com.sankuai.erp.component.appinit.api.AppInitManager;
-import com.sankuai.erp.component.appinit.api.SimpleAppInitCallback;
+import com.lkl.flowcontrol.api.appinit.AppInitApiUtils;
+import com.lkl.flowcontrol.api.appinit.AppInitManager;
+import com.lkl.flowcontrol.api.appinit.SimpleAppInitCallback;
 import com.sankuai.erp.component.appinit.common.AppInitItem;
 import com.sankuai.erp.component.appinit.common.ChildInitTable;
 
