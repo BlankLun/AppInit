@@ -178,11 +178,11 @@ String[] childInitTableCanonicalNameArr = assetManager.list('AppInit');
 
 ![初始化条目源码](imgs/source.png)
 
-#### APT 在固定包「com.sankuai.erp.component.appinit.generated」下生成「模块唯一标识转驼峰命名ChildInitTable.java」 
+#### APT 在固定包「com.lkl.flowcontrol.appinit.generated」下生成「模块唯一标识转驼峰命名ChildInitTable.java」 
 
 ![注解处理器](imgs/processor.png)
 
-生成的类在 build/generated/source/apt/debug/com/sankuai/erp/component/appinit/generated 目录下，该类中包含模块唯一标识，依赖的其他模块，以及该模块中所有的初始化条目
+生成的类在 build/generated/source/apt/debug/com/lkl/flowcontrol/appinit/generated 目录下，该类中包含模块唯一标识，依赖的其他模块，以及该模块中所有的初始化条目
 
 ![生成的字表](imgs/child_init_table.png)
 

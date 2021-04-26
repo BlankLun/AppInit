@@ -43,30 +43,6 @@ subprojects { project ->
     // 应用 FlowControl 插件。如果有用到 Kotlin，需要放到 Kotlin 插件之后
     apply plugin: 'flow-control-plugin'
 
-    // 测试多 flavor 的情况
-//    android {
-//        /**
-//         * money 场景，免费版和收费版
-//         * channel 场景，不同的市场渠道
-//         */
-//        flavorDimensions 'money', 'channel'
-//
-//        productFlavors {
-//            free {
-//                dimension 'money'
-//            }
-//            vip {
-//                dimension 'money'
-//            }
-//            baidu {
-//                dimension 'channel'
-//            }
-//            xiaomi {
-//                dimension 'channel'
-//            }
-//        }
-//    }
-
     dependencies {
         // android support
         implementation 'com.android.support:appcompat-v7:28.0.0'
