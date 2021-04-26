@@ -1,4 +1,4 @@
-package com.sankuai.erp.component.appinitmodule3
+package com.lkl.flowcontrol.appinitmodule3
 
 import android.os.Bundle
 import android.support.v4.app.Fragment

@@ -1,11 +1,11 @@
-package com.sankuai.erp.component.appinitmodule3.init;
+package com.lkl.flowcontrol.appinitmodule3.init;
 
 import com.lkl.flowcontrol.api.appinit.SimpleAppInit;
 import com.lkl.flowcontrol.common.FlowLogger;
 import com.lkl.flowcontrol.common.appinit.AppInit;
 
-@AppInit(priority = 5, description = "模块35的描述", onlyForDebug = true)
-public class Module3FiveInit extends SimpleAppInit {
+@AppInit(priority = 10, description = "模块34的描述")
+public class Module3FourInit extends SimpleAppInit {
 
     @Override
     public void onCreate() {
