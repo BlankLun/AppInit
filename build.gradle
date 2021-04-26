@@ -20,7 +20,7 @@ buildscript {
         classpath "com.sankuai.waimai.router:plugin:1.1.0"
 
 //        if (project.findProject(':buildSrc') == null) {
-//            classpath "com.sankuai.erp.component:appinit-plugin:1.0.6"
+//            classpath "com.lkl.flowcontrol:appinit-plugin:1.0.6"
 //        }
     }
 }

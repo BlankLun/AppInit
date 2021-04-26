@@ -4,7 +4,7 @@ apply from: rootProject.file('publish_module_config.gradle')
 dependencies {
     implementation 'com.squareup:javapoet:1.10.0'
     if (project.ext.isPublish) {
-        implementation "com.sankuai.erp.component:appinit-common:${rootProject.project(':FlowCommon').POM_VERSION_NAME}"
+        implementation "com.lkl.flowcontrol:FlowCommon:${rootProject.project(':FlowCommon').POM_VERSION_NAME}"
     } else {
         implementation project(':FlowCommon')
     }

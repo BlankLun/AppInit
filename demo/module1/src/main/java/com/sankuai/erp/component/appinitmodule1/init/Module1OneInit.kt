@@ -9,7 +9,7 @@ import com.lkl.flowcontrol.common.FlowLogger
  * 创建时间:2018/11/28
  * 描述:
  */
-@AppInit(priority = 100, aheadOf = "com.sankuai.erp.component:appinit-test-module1:Module1TwoInit", description = "模块11的描述")
+@AppInit(priority = 100, aheadOf = "com.lkl.flowcontrol:appinit-test-module1:Module1TwoInit", description = "模块11的描述")
 class Module1OneInit : SimpleAppInit() {
 
     override fun onCreate() {

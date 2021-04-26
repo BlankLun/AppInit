@@ -88,10 +88,10 @@ abstract class BaseAptPlugin implements Plugin<Project> {
             }
         } else {
             info "不调试 Apt"
-            mProject.dependencies.add('implementation', "com.sankuai.erp.component:${getApiPomArtifactId()}:${getPomVersionName()}")
-            mProject.dependencies.add('annotationProcessor', "com.sankuai.erp.component:${getCompilerPomArtifactId()}:${getPomVersionName()}")
+            mProject.dependencies.add('implementation', "com.lkl.flowcontrol:${getApiPomArtifactId()}:${getPomVersionName()}")
+            mProject.dependencies.add('annotationProcessor', "com.lkl.flowcontrol:${getCompilerPomArtifactId()}:${getPomVersionName()}")
             if (hasKotlinAndroidPlugin(mProject)) {
-                mProject.dependencies.add('kapt', "com.sankuai.erp.component:${getCompilerPomArtifactId()}:${getPomVersionName()}")
+                mProject.dependencies.add('kapt', "com.lkl.flowcontrol:${getCompilerPomArtifactId()}:${getPomVersionName()}")
             }
         }
     }
