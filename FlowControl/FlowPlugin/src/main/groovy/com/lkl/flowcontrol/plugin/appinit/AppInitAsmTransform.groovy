@@ -1,5 +1,6 @@
 package com.lkl.flowcontrol.plugin.appinit
 
+import com.lkl.flowcontrol.common.FlowLogger
 import com.lkl.flowcontrol.plugin.BaseAsmTransform
 import com.sankuai.erp.component.appinit.common.*
 import org.gradle.api.Project
@@ -69,14 +70,14 @@ class AppInitAsmTransform extends BaseAsmTransform {
     protected void scanClass(String name, String superName, String[] interfaces, File dest) {
         if (superName == CHILD_INIT_TABLE_ENTRY_NAME) {
             mChildInitTableClassNameList.add(name.replace('/', '.'))
-            AppInitLogger.d "找到了子表 ${name}"
+            FlowLogger.d "找到了子表 ${name}"
         } else if (name == APP_INIT_MANAGER_ENTRY_NAME) {
             mAppInitManagerCtClassDest = dest
-            AppInitLogger.d "找到了 AppInitManager ${name}，存放位置为 ${dest}"
+            FlowLogger.d "找到了 AppInitManager ${name}，存放位置为 ${dest}"
         } else if (name == mApplicationEntryName) {
             mApplicationCtClassDest = dest
             mApplicationEntryNameWithClass = "${name}.class"
-            AppInitLogger.d "找到了 Application ${name}，存放位置为 ${dest}"
+            FlowLogger.d "找到了 Application ${name}，存放位置为 ${dest}"
         }
     }
 
@@ -85,7 +86,7 @@ class AppInitAsmTransform extends BaseAsmTransform {
         if (mAppInitManagerCtClassDest == null || !mAppInitManagerCtClassDest.exists()) {
             throw new IllegalStateException("未找到 ${com.lkl.flowcontrol.common.ModuleConsts.APP_INIT_MANAGER_CANONICAL_NAME}")
         }
-        AppInitLogger.d "mAppInitManagerCtClassDest 为 ${mAppInitManagerCtClassDest.absolutePath}"
+        FlowLogger.d "mAppInitManagerCtClassDest 为 ${mAppInitManagerCtClassDest.absolutePath}"
         // 修改 AppInitManager，一定是在 jar 包里
         modifyJarClass(mAppInitManagerCtClassDest)
 
@@ -94,7 +95,7 @@ class AppInitAsmTransform extends BaseAsmTransform {
             // 未找到 AndroidManifest.xml 中配置的 Application，不自动注入字节码
             return
         }
-        AppInitLogger.d "mApplicationCtClassDest 为 ${mApplicationCtClassDest.absolutePath}"
+        FlowLogger.d "mApplicationCtClassDest 为 ${mApplicationCtClassDest.absolutePath}"
         // 修改 Application，可能在 jar 包里，也可能在壳工程的目录里
         if (mApplicationCtClassDest.isDirectory()) {
             modifyDirectoryClass(mApplicationCtClassDest, mApplicationEntryNameWithClass)

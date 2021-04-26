@@ -1,8 +1,8 @@
 package com.sankuai.erp.component.appinitdemo.init;
 
 import com.lkl.flowcontrol.api.appinit.SimpleAppInit;
+import com.lkl.flowcontrol.common.FlowLogger;
 import com.sankuai.erp.component.appinit.common.AppInit;
-import com.sankuai.erp.component.appinit.common.AppInitLogger;
 import com.sankuai.waimai.router.Router;
 import com.sankuai.waimai.router.common.DefaultRootUriHandler;
 
@@ -11,7 +11,7 @@ public class RouterInit extends SimpleAppInit {
 
     @Override
     public void onCreate() {
-        AppInitLogger.demo("onCreate " + TAG);
+        FlowLogger.demo("onCreate " + TAG);
         // SimpleAppInit 中包含了 mApplication 和 mIsDebug 属性，可以直接在子类中使用
         Router.init(new DefaultRootUriHandler(mApplication));
     }

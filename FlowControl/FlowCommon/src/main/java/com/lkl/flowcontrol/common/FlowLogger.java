@@ -1,14 +1,14 @@
-package com.sankuai.erp.component.appinit.common;
+package com.lkl.flowcontrol.common;
 
 /**
  * 作者:王浩
  * 创建时间:2018/1/18
  * 描述:
  */
-public final class AppInitLogger {
+public final class FlowLogger {
     public static ILogger sLogger;
 
-    private AppInitLogger() {
+    private FlowLogger() {
     }
 
     private static boolean isNotDebug() {

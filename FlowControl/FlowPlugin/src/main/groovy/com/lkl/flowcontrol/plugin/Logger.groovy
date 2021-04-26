@@ -1,6 +1,6 @@
 package com.lkl.flowcontrol.plugin
 
-import com.sankuai.erp.component.appinit.common.ILogger
+import com.lkl.flowcontrol.common.ILogger
 import org.gradle.api.Project
 
 /**

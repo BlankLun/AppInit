@@ -4,7 +4,7 @@ import com.android.SdkConstants
 import com.android.build.api.transform.*
 import com.android.build.gradle.internal.pipeline.TransformManager
 import com.sankuai.erp.component.appinit.common.AppInitCommonUtils
-import com.sankuai.erp.component.appinit.common.AppInitLogger
+import com.lkl.flowcontrol.common.FlowLogger
 import groovy.io.FileType
 import org.apache.commons.codec.digest.DigestUtils
 import org.apache.commons.io.FileUtils
@@ -75,7 +75,7 @@ abstract class BaseTransform extends Transform {
     protected void updateVariant(TransformInvocation transformInvocation) {
         // transformInvocation.context 为 TransformTask
         mVariant = transformInvocation.context.getVariantName()
-        AppInitLogger.d "变体为 ${mVariant}"
+        FlowLogger.d "变体为 ${mVariant}"
     }
 
     protected static String getDestJarName(JarInput jarInput) {

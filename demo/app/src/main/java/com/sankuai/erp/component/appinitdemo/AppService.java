@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 
-import com.sankuai.erp.component.appinit.common.AppInitLogger;
+import com.lkl.flowcontrol.common.FlowLogger;
 
 /**
  * 作者:王浩
@@ -17,12 +17,12 @@ public class AppService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        AppInitLogger.demo("AppService onCreate");
+        FlowLogger.demo("AppService onCreate");
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        AppInitLogger.demo("AppService onStartCommand");
+        FlowLogger.demo("AppService onStartCommand");
         return START_STICKY;
     }
 

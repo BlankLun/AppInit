@@ -3,7 +3,7 @@ package com.lkl.flowcontrol.plugin.appinit
 import com.sankuai.erp.component.appinit.common.AppInit
 import com.sankuai.erp.component.appinit.common.AppInitCommonUtils
 import com.sankuai.erp.component.appinit.common.AppInitItem
-import com.sankuai.erp.component.appinit.common.AppInitLogger
+import com.lkl.flowcontrol.common.FlowLogger
 import com.sankuai.erp.component.appinit.common.ChildInitTable
 
 /**
@@ -172,7 +172,7 @@ class ChildInitTableSortUtils {
             msg = String.format("        模块《%s》不存在\n", moduleCoordinate)
         }
         NOT_EXIST_MODULE_SB.append(msg)
-        AppInitLogger.e(msg)
+        FlowLogger.e(msg)
         return null
     }
 

@@ -3,7 +3,7 @@ package com.lkl.flowcontrol.api.appinit;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.sankuai.erp.component.appinit.common.ILogger;
+import com.lkl.flowcontrol.common.ILogger;
 
 /**
  * 作者:王浩

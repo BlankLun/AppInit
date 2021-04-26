@@ -6,10 +6,10 @@ import android.content.ComponentCallbacks2;
 import android.content.res.Configuration;
 import android.support.annotation.NonNull;
 
+import com.lkl.flowcontrol.common.FlowLogger;
 import com.sankuai.erp.component.appinit.common.AppInitCallback;
 import com.sankuai.erp.component.appinit.common.AppInitCommonUtils;
 import com.sankuai.erp.component.appinit.common.AppInitItem;
-import com.sankuai.erp.component.appinit.common.AppInitLogger;
 import com.sankuai.erp.component.appinit.common.ChildInitTable;
 import com.sankuai.erp.component.appinit.common.IAppInit;
 
@@ -80,7 +80,7 @@ public final class AppInitManager {
 
         mAppInitCallback.onInitStart(AppInitApiUtils.isMainProcess(), AppInitApiUtils.getProcessName());
         mIsDebug = mAppInitCallback.isDebug();
-        AppInitLogger.sLogger = new Logger();
+        FlowLogger.sLogger = new Logger();
 
         injectChildInitTableList();
         injectAppInitItemList();

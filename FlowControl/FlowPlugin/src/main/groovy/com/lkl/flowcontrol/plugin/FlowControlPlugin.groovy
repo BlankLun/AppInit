@@ -2,7 +2,7 @@ package com.lkl.flowcontrol.plugin
 
 import com.lkl.flowcontrol.plugin.appinit.AppInitAsmTransform
 import com.lkl.flowcontrol.plugin.appinit.AppInitExtension
-import com.sankuai.erp.component.appinit.common.AppInitLogger
+import com.lkl.flowcontrol.common.FlowLogger
 import com.lkl.flowcontrol.common.ModuleConsts
 
 /**
@@ -13,7 +13,7 @@ class FlowControlPlugin extends BaseAptPlugin {
 
     @Override
     protected void handleMasterModule() {
-        AppInitLogger.sLogger = new Logger(mProject)
+        FlowLogger.sLogger = new Logger(mProject)
         mProject.extensions.create('appInit', AppInitExtension)
 
         mProject.android.registerTransform(new AppInitAsmTransform(mProject))

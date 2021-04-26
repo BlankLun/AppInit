@@ -1,5 +1,7 @@
 package com.sankuai.erp.component.appinit.common;
 
+import com.lkl.flowcontrol.common.FlowLogger;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -167,7 +169,7 @@ public final class AppInitCommonUtils {
      */
     public static long time(String desc, Runnable runnable) {
         long time = time(runnable);
-        AppInitLogger.d(String.format("%s耗时:%sms\n\n", desc, time));
+        FlowLogger.d(String.format("%s耗时:%sms\n\n", desc, time));
         return time;
     }
 
@@ -176,7 +178,7 @@ public final class AppInitCommonUtils {
      */
     public static String timeStr(String desc, Runnable runnable) {
         String msg = String.format("%s耗时:%sms\n\n", desc, time(runnable));
-        AppInitLogger.d(msg);
+        FlowLogger.d(msg);
         return msg;
     }
 }

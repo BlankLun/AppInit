@@ -2,7 +2,7 @@ package com.sankuai.erp.component.appinitmodule3.init
 
 import com.lkl.flowcontrol.api.appinit.SimpleAppInit
 import com.sankuai.erp.component.appinit.common.AppInit
-import com.sankuai.erp.component.appinit.common.AppInitLogger
+import com.lkl.flowcontrol.common.FlowLogger
 
 /**
  * 作者:王浩
@@ -12,6 +12,6 @@ import com.sankuai.erp.component.appinit.common.AppInitLogger
 @AppInit(priority = 60, description = "模块32的描述", aheadOf = "com.sankuai.erp.component:appinit-test-module1:Module1OneInit")
 class Module3TwoInit : SimpleAppInit() {
     override fun onCreate() {
-        AppInitLogger.demo("onCreate $TAG")
+        FlowLogger.demo("onCreate $TAG")
     }
 }

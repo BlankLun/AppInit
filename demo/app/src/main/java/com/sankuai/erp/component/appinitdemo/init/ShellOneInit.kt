@@ -2,7 +2,7 @@ package com.sankuai.erp.component.appinitdemo.init
 
 import com.lkl.flowcontrol.api.appinit.SimpleAppInit
 import com.sankuai.erp.component.appinit.common.AppInit
-import com.sankuai.erp.component.appinit.common.AppInitLogger
+import com.lkl.flowcontrol.common.FlowLogger
 
 /**
  * 作者:王浩
@@ -13,6 +13,6 @@ import com.sankuai.erp.component.appinit.common.AppInitLogger
 class ShellOneInit : SimpleAppInit() {
 
     override fun onCreate() {
-        AppInitLogger.demo("onCreate $TAG")
+        FlowLogger.demo("onCreate $TAG")
     }
 }
