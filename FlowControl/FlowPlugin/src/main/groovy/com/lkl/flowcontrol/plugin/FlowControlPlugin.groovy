@@ -3,7 +3,7 @@ package com.lkl.flowcontrol.plugin
 import com.lkl.flowcontrol.plugin.appinit.AppInitAsmTransform
 import com.lkl.flowcontrol.plugin.appinit.AppInitExtension
 import com.sankuai.erp.component.appinit.common.AppInitLogger
-import com.sankuai.erp.component.appinit.common.ModuleConsts
+import com.lkl.flowcontrol.common.ModuleConsts
 
 /**
  * 「app 初始化、多模块初始化」插件

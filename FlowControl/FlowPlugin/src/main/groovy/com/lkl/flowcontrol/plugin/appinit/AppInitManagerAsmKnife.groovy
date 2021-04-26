@@ -3,7 +3,7 @@ package com.lkl.flowcontrol.plugin.appinit
 import com.lkl.flowcontrol.plugin.BaseTransform
 import com.sankuai.erp.component.appinit.common.AppInitItem
 import com.sankuai.erp.component.appinit.common.ChildInitTable
-import com.sankuai.erp.component.appinit.common.ModuleConsts
+import com.lkl.flowcontrol.common.ModuleConsts
 import org.objectweb.asm.*
 
 /**

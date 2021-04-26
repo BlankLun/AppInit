@@ -1,8 +1,8 @@
 package com.lkl.flowcontrol.compiler.appinit;
 
+import com.lkl.flowcontrol.common.ModuleConsts;
 import com.lkl.flowcontrol.compiler.BaseGenerateChildTableProcessor;
 import com.sankuai.erp.component.appinit.common.AppInit;
-import com.sankuai.erp.component.appinit.common.ModuleConsts;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeName;
 

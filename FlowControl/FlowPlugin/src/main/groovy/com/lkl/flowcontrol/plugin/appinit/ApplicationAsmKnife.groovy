@@ -1,6 +1,6 @@
 package com.lkl.flowcontrol.plugin.appinit
 
-import com.sankuai.erp.component.appinit.common.ModuleConsts
+import com.lkl.flowcontrol.common.ModuleConsts
 import org.objectweb.asm.*
 
 /**
