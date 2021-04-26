@@ -2,7 +2,7 @@ package com.sankuai.erp.component.appinitdemo.init;
 
 import com.lkl.flowcontrol.api.appinit.SimpleAppInit;
 import com.lkl.flowcontrol.common.FlowLogger;
-import com.sankuai.erp.component.appinit.common.AppInit;
+import com.lkl.flowcontrol.common.appinit.AppInit;
 import com.sankuai.waimai.router.Router;
 import com.sankuai.waimai.router.common.DefaultRootUriHandler;
 

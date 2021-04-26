@@ -1,4 +1,4 @@
-package com.sankuai.erp.component.appinit.common;
+package com.lkl.flowcontrol.common.appinit;
 
 import com.lkl.flowcontrol.common.appinit.Process;
 

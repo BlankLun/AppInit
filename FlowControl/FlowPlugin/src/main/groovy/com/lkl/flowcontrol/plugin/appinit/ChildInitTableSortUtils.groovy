@@ -1,6 +1,6 @@
 package com.lkl.flowcontrol.plugin.appinit
 
-import com.sankuai.erp.component.appinit.common.AppInit
+import com.lkl.flowcontrol.common.appinit.AppInit
 import com.lkl.flowcontrol.common.appinit.AppInitCommonUtils
 import com.sankuai.erp.component.appinit.common.AppInitItem
 import com.lkl.flowcontrol.common.FlowLogger
