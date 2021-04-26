@@ -9,7 +9,7 @@ appInit {
     dependency([
             'demo:app'                                      : ['com.lkl.flowcontrol:appinit-test-module1', "${project.rootProject.name}:module2"],
             "${project.rootProject.name}:module2"           : 'com.lkl.flowcontrol:appinit-test-module3',
-            'com.lkl.flowcontrol:appinit-test-module3': 'com.lkl.flowcontrol:appinit-test-module1'
+            'com.lkl.flowcontrol:appinit-test-module3'      : 'com.lkl.flowcontrol:appinit-test-module1'
     ])
 
     // 依赖的模块或 aheadOf 指定的初始化不存在时是否中断编译，默认为 true
