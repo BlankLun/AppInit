@@ -1,6 +1,6 @@
 package com.lkl.flowcontrol.plugin.appinit
 
-import com.sankuai.erp.component.appinit.common.AppInitCommonUtils
+import com.lkl.flowcontrol.common.appinit.AppInitCommonUtils
 /**
  * 作者:王浩
  * 创建时间:2018/11/2

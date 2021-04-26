@@ -7,8 +7,8 @@ import android.content.res.Configuration;
 import android.support.annotation.NonNull;
 
 import com.lkl.flowcontrol.common.FlowLogger;
-import com.sankuai.erp.component.appinit.common.AppInitCallback;
-import com.sankuai.erp.component.appinit.common.AppInitCommonUtils;
+import com.lkl.flowcontrol.common.appinit.AppInitCallback;
+import com.lkl.flowcontrol.common.appinit.AppInitCommonUtils;
 import com.sankuai.erp.component.appinit.common.AppInitItem;
 import com.sankuai.erp.component.appinit.common.ChildInitTable;
 import com.sankuai.erp.component.appinit.common.IAppInit;

@@ -1,6 +1,6 @@
 package com.lkl.flowcontrol.api.appinit;
 
-import com.sankuai.erp.component.appinit.common.AppInitCallback;
+import com.lkl.flowcontrol.common.appinit.AppInitCallback;
 import com.sankuai.erp.component.appinit.common.AppInitItem;
 import com.sankuai.erp.component.appinit.common.ChildInitTable;
 

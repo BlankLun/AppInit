@@ -1,6 +1,8 @@
 package com.lkl.flowcontrol.plugin.appinit
 
 import com.lkl.flowcontrol.common.FlowLogger
+import com.lkl.flowcontrol.common.ModuleConsts
+import com.lkl.flowcontrol.common.appinit.AppInitCommonUtils
 import com.lkl.flowcontrol.plugin.BaseAsmTransform
 import com.sankuai.erp.component.appinit.common.*
 import org.gradle.api.Project
@@ -14,9 +16,9 @@ import java.util.concurrent.CopyOnWriteArrayList
  * 描述:
  */
 class AppInitAsmTransform extends BaseAsmTransform {
-    private static final String CHILD_INIT_TABLE_ENTRY_NAME = convertCanonicalNameToEntryName(com.lkl.flowcontrol.common.ModuleConsts.CHILD_INIT_TABLE_CANONICAL_NAME, false)
-    private static final String APP_INIT_MANAGER_ENTRY_NAME = convertCanonicalNameToEntryName(com.lkl.flowcontrol.common.ModuleConsts.APP_INIT_MANAGER_CANONICAL_NAME, false)
-    private static final String APP_INIT_MANAGER_ENTRY_NAME_WITH_CLASS = convertCanonicalNameToEntryName(com.lkl.flowcontrol.common.ModuleConsts.APP_INIT_MANAGER_CANONICAL_NAME, true)
+    private static final String CHILD_INIT_TABLE_ENTRY_NAME = convertCanonicalNameToEntryName(ModuleConsts.CHILD_INIT_TABLE_CANONICAL_NAME, false)
+    private static final String APP_INIT_MANAGER_ENTRY_NAME = convertCanonicalNameToEntryName(ModuleConsts.APP_INIT_MANAGER_CANONICAL_NAME, false)
+    private static final String APP_INIT_MANAGER_ENTRY_NAME_WITH_CLASS = convertCanonicalNameToEntryName(ModuleConsts.APP_INIT_MANAGER_CANONICAL_NAME, true)
 
     private File mAppInitManagerCtClassDest
     private File mApplicationCtClassDest
@@ -59,7 +61,7 @@ class AppInitAsmTransform extends BaseAsmTransform {
 
     @Override
     protected boolean shouldScanPath(String path) {
-        boolean result = path.contains(com.lkl.flowcontrol.common.ModuleConsts.PACKAGE_NAME_GENERATED_SLASH) || path.contains(APP_INIT_MANAGER_ENTRY_NAME_WITH_CLASS)
+        boolean result = path.contains(ModuleConsts.PACKAGE_NAME_GENERATED_SLASH) || path.contains(APP_INIT_MANAGER_ENTRY_NAME_WITH_CLASS)
         if (!AppInitCommonUtils.isEmpty(mAppInitExtension.applicationCanonicalName)) {
             result = result || path.contains(mApplicationEntryNameWithClass)
         }
@@ -84,7 +86,7 @@ class AppInitAsmTransform extends BaseAsmTransform {
     @Override
     protected void handle() {
         if (mAppInitManagerCtClassDest == null || !mAppInitManagerCtClassDest.exists()) {
-            throw new IllegalStateException("未找到 ${com.lkl.flowcontrol.common.ModuleConsts.APP_INIT_MANAGER_CANONICAL_NAME}")
+            throw new IllegalStateException("未找到 ${ModuleConsts.APP_INIT_MANAGER_CANONICAL_NAME}")
         }
         FlowLogger.d "mAppInitManagerCtClassDest 为 ${mAppInitManagerCtClassDest.absolutePath}"
         // 修改 AppInitManager，一定是在 jar 包里

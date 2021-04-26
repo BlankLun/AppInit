@@ -3,7 +3,7 @@ package com.lkl.flowcontrol.plugin
 import com.android.SdkConstants
 import com.android.build.api.transform.*
 import com.android.build.gradle.internal.pipeline.TransformManager
-import com.sankuai.erp.component.appinit.common.AppInitCommonUtils
+import com.lkl.flowcontrol.common.appinit.AppInitCommonUtils
 import com.lkl.flowcontrol.common.FlowLogger
 import groovy.io.FileType
 import org.apache.commons.codec.digest.DigestUtils

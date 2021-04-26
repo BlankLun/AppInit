@@ -4,7 +4,7 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.text.TextUtils;
 
-import com.sankuai.erp.component.appinit.common.AppInitCommonUtils;
+import com.lkl.flowcontrol.common.appinit.AppInitCommonUtils;
 import com.sankuai.erp.component.appinit.common.AppInitItem;
 import com.sankuai.erp.component.appinit.common.ChildInitTable;
 

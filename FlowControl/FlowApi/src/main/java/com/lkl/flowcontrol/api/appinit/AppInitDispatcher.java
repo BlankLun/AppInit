@@ -6,7 +6,7 @@ import android.content.ComponentCallbacks2;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 
-import com.sankuai.erp.component.appinit.common.AppInitCommonUtils;
+import com.lkl.flowcontrol.common.appinit.AppInitCommonUtils;
 import com.sankuai.erp.component.appinit.common.AppInitItem;
 
 import java.util.List;
