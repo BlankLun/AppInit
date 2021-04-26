@@ -1,4 +1,4 @@
-package com.sankuai.erp.component.appinitmodule1;
+package com.lkl.flowcontrol.appinitmodule1;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
