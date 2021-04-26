@@ -1,4 +1,4 @@
-package com.sankuai.erp.component.appinitmodule2.init
+package com.lkl.flowcontrol.appinitmodule2.init
 
 import com.lkl.flowcontrol.api.appinit.SimpleAppInit
 import com.lkl.flowcontrol.common.appinit.AppInit
