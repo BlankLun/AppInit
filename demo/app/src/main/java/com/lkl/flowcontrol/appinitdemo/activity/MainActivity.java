@@ -1,4 +1,4 @@
-package com.sankuai.erp.component.appinitdemo.activity;
+package com.lkl.flowcontrol.appinitdemo.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.lkl.flowcontrol.api.appinit.AppInitManager;
-import com.sankuai.erp.component.appinitdemo.App;
-import com.sankuai.erp.component.appinitdemo.R;
+import com.lkl.flowcontrol.appinitdemo.App;
+import com.lkl.flowcontrol.appinitdemo.R;
 import com.sankuai.waimai.router.Router;
 
 public class MainActivity extends AppCompatActivity {

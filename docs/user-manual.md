@@ -282,7 +282,7 @@ appInit {
 ```Groovy
 appInit {
     // AndroidManifest.xml 中配置的 Application 的类全名
-    applicationCanonicalName 'com.sankuai.erp.component.appinitdemo.App'
+    applicationCanonicalName 'com.lkl.flowcontrol.appinitdemo.App'
 }
 ```
 

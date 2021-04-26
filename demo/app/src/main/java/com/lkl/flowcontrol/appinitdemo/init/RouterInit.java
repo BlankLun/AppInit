@@ -1,4 +1,4 @@
-package com.sankuai.erp.component.appinitdemo.init;
+package com.lkl.flowcontrol.appinitdemo.init;
 
 import com.lkl.flowcontrol.api.appinit.SimpleAppInit;
 import com.lkl.flowcontrol.common.FlowLogger;

@@ -1,4 +1,4 @@
-package com.sankuai.erp.component.appinitdemo;
+package com.lkl.flowcontrol.appinitdemo;
 
 import android.app.Service;
 import android.content.Intent;

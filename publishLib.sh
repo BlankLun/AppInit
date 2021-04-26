@@ -41,4 +41,4 @@ sed -i -e "s/classpath 'com.novoda:bintray-release:0.8.1'/\/\/ classpath 'com.no
 # 打包并启动 demo
 ./gradlew clean assembleDebug
 adb install -r demo/app/build/outputs/apk/debug/app-debug.apk
-adb shell am start -W -n com.sankuai.erp.component.appinitdemo/com.sankuai.erp.component.appinitdemo.activity.MainActivity
+adb shell am start -W -n com.lkl.flowcontrol.appinitdemo/com.lkl.flowcontrol.appinitdemo.activity.MainActivity

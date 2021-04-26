@@ -1,4 +1,4 @@
-package com.sankuai.erp.component.appinitdemo;
+package com.lkl.flowcontrol.appinitdemo;
 
 import android.content.res.Configuration;
 import android.support.multidex.MultiDexApplication;
