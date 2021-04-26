@@ -7,7 +7,7 @@ import android.content.res.Configuration;
 import android.os.AsyncTask;
 
 import com.lkl.flowcontrol.common.appinit.AppInitCommonUtils;
-import com.sankuai.erp.component.appinit.common.AppInitItem;
+import com.lkl.flowcontrol.common.appinit.AppInitItem;
 
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;

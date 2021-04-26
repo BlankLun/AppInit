@@ -7,8 +7,8 @@ import android.util.Log;
 import com.lkl.flowcontrol.api.appinit.AppInitApiUtils;
 import com.lkl.flowcontrol.api.appinit.AppInitManager;
 import com.lkl.flowcontrol.api.appinit.SimpleAppInitCallback;
-import com.sankuai.erp.component.appinit.common.AppInitItem;
-import com.sankuai.erp.component.appinit.common.ChildInitTable;
+import com.lkl.flowcontrol.common.appinit.AppInitItem;
+import com.lkl.flowcontrol.common.appinit.ChildInitTable;
 
 import java.util.HashMap;
 import java.util.List;

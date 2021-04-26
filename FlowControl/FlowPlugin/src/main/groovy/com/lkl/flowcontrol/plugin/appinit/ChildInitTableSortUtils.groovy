@@ -2,9 +2,9 @@ package com.lkl.flowcontrol.plugin.appinit
 
 import com.lkl.flowcontrol.common.appinit.AppInit
 import com.lkl.flowcontrol.common.appinit.AppInitCommonUtils
-import com.sankuai.erp.component.appinit.common.AppInitItem
+import com.lkl.flowcontrol.common.appinit.AppInitItem
 import com.lkl.flowcontrol.common.FlowLogger
-import com.sankuai.erp.component.appinit.common.ChildInitTable
+import com.lkl.flowcontrol.common.appinit.ChildInitTable
 
 /**
  * 作者:王浩

@@ -9,9 +9,9 @@ import android.support.annotation.NonNull;
 import com.lkl.flowcontrol.common.FlowLogger;
 import com.lkl.flowcontrol.common.appinit.AppInitCallback;
 import com.lkl.flowcontrol.common.appinit.AppInitCommonUtils;
-import com.sankuai.erp.component.appinit.common.AppInitItem;
-import com.sankuai.erp.component.appinit.common.ChildInitTable;
-import com.sankuai.erp.component.appinit.common.IAppInit;
+import com.lkl.flowcontrol.common.appinit.AppInitItem;
+import com.lkl.flowcontrol.common.appinit.ChildInitTable;
+import com.lkl.flowcontrol.common.appinit.IAppInit;
 
 import java.util.ArrayList;
 import java.util.List;

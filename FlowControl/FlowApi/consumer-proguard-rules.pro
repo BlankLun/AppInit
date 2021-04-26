@@ -1,2 +1,2 @@
--keep class * implements com.sankuai.erp.component.appinit.common.IAppInit
--keep class * extends com.sankuai.erp.component.appinit.common.ChildInitTable
+-keep class * implements com.lkl.flowcontrol.common.appinit.IAppInit
+-keep class * extends com.lkl.flowcontrol.common.appinit.ChildInitTable

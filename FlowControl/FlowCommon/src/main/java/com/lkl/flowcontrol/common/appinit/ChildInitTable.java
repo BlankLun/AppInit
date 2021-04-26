@@ -1,6 +1,4 @@
-package com.sankuai.erp.component.appinit.common;
-
-import com.lkl.flowcontrol.common.appinit.AppInitCommonUtils;
+package com.lkl.flowcontrol.common.appinit;
 
 import java.util.ArrayList;
 import java.util.Arrays;

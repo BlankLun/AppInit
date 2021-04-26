@@ -1,8 +1,8 @@
 package com.lkl.flowcontrol.plugin.appinit
 
 import com.lkl.flowcontrol.plugin.BaseTransform
-import com.sankuai.erp.component.appinit.common.AppInitItem
-import com.sankuai.erp.component.appinit.common.ChildInitTable
+import com.lkl.flowcontrol.common.appinit.AppInitItem
+import com.lkl.flowcontrol.common.appinit.ChildInitTable
 import com.lkl.flowcontrol.common.ModuleConsts
 import org.objectweb.asm.*
 

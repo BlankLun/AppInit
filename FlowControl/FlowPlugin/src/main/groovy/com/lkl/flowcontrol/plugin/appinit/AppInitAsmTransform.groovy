@@ -3,8 +3,9 @@ package com.lkl.flowcontrol.plugin.appinit
 import com.lkl.flowcontrol.common.FlowLogger
 import com.lkl.flowcontrol.common.ModuleConsts
 import com.lkl.flowcontrol.common.appinit.AppInitCommonUtils
+import com.lkl.flowcontrol.common.appinit.AppInitItem
+import com.lkl.flowcontrol.common.appinit.ChildInitTable
 import com.lkl.flowcontrol.plugin.BaseAsmTransform
-import com.sankuai.erp.component.appinit.common.*
 import org.gradle.api.Project
 import org.objectweb.asm.ClassWriter
 

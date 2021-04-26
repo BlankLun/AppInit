@@ -1,7 +1,4 @@
-package com.sankuai.erp.component.appinit.common;
-
-import com.lkl.flowcontrol.common.appinit.AppInitCommonUtils;
-import com.lkl.flowcontrol.common.appinit.Process;
+package com.lkl.flowcontrol.common.appinit;
 
 /**
  * 作者:王浩

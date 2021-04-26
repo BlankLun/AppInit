@@ -1,8 +1,6 @@
 package com.lkl.flowcontrol.common.appinit;
 
 import com.lkl.flowcontrol.common.FlowLogger;
-import com.sankuai.erp.component.appinit.common.AppInitItem;
-import com.sankuai.erp.component.appinit.common.ChildInitTable;
 
 import java.util.ArrayList;
 import java.util.Collections;

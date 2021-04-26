@@ -1,8 +1,5 @@
 package com.lkl.flowcontrol.common.appinit;
 
-import com.sankuai.erp.component.appinit.common.AppInitItem;
-import com.sankuai.erp.component.appinit.common.ChildInitTable;
-
 import java.util.List;
 import java.util.Map;
 

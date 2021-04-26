@@ -5,7 +5,7 @@ import android.content.ComponentCallbacks;
 import android.content.ComponentCallbacks2;
 import android.content.res.Configuration;
 
-import com.sankuai.erp.component.appinit.common.IAppInit;
+import com.lkl.flowcontrol.common.appinit.IAppInit;
 
 /**
  * 作者:王浩
