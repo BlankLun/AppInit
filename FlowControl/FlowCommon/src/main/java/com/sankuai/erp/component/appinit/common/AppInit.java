@@ -1,5 +1,7 @@
 package com.sankuai.erp.component.appinit.common;
 
+import com.lkl.flowcontrol.common.appinit.Process;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

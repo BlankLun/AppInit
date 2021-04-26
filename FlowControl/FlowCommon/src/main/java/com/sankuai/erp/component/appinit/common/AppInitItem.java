@@ -1,5 +1,7 @@
 package com.sankuai.erp.component.appinit.common;
 
+import com.lkl.flowcontrol.common.appinit.Process;
+
 /**
  * 作者:王浩
  * 创建时间:2018/1/18

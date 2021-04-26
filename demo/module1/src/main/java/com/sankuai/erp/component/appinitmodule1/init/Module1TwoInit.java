@@ -1,7 +1,7 @@
 package com.sankuai.erp.component.appinitmodule1.init;
 
 import com.lkl.flowcontrol.api.appinit.SimpleAppInit;
-import com.sankuai.erp.component.appinit.common.Process;
+import com.lkl.flowcontrol.common.appinit.Process;
 import com.sankuai.erp.component.appinit.common.AppInit;
 import com.sankuai.erp.component.appinit.common.AppInitLogger;
 
