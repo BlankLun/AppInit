@@ -14,8 +14,8 @@ public interface ModuleConsts {
     String PACKAGE_NAME_PRE = "com.lkl.flowcontrol";
     String DOT = ".";
 
-    String PACKAGE_NAME_GENERATED = PACKAGE_NAME_PRE + DOT + "generated";
-    String PACKAGE_NAME_GENERATED_SLASH = PACKAGE_NAME_GENERATED.replace('.', '/');
+    String PACKAGE_NAME_GENERATED_APP_INIT = PACKAGE_NAME_PRE + DOT + "appinit.generated";
+    String PACKAGE_NAME_GENERATED_APP_INIT_SLASH = PACKAGE_NAME_GENERATED_APP_INIT.replace('.', '/');
 
     String PACKAGE_NAME_COMMON = PACKAGE_NAME_PRE + DOT + "common";
     String PACKAGE_NAME_COMMON_SLASH = PACKAGE_NAME_COMMON.replace('.', '/');

@@ -62,7 +62,7 @@ class AppInitAsmTransform extends BaseAsmTransform {
 
     @Override
     protected boolean shouldScanPath(String path) {
-        boolean result = path.contains(ModuleConsts.PACKAGE_NAME_GENERATED_SLASH) || path.contains(APP_INIT_MANAGER_ENTRY_NAME_WITH_CLASS)
+        boolean result = path.contains(ModuleConsts.PACKAGE_NAME_GENERATED_APP_INIT_SLASH) || path.contains(APP_INIT_MANAGER_ENTRY_NAME_WITH_CLASS)
         if (!AppInitCommonUtils.isEmpty(mAppInitExtension.applicationCanonicalName)) {
             result = result || path.contains(mApplicationEntryNameWithClass)
         }

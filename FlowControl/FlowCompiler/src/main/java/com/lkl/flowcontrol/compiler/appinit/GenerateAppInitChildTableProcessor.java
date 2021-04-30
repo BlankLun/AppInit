@@ -78,6 +78,6 @@ public class GenerateAppInitChildTableProcessor extends BaseGenerateChildTablePr
 
     @Override
     protected String getGeneratedPackageName() {
-        return ModuleConsts.PACKAGE_NAME_GENERATED;
+        return ModuleConsts.PACKAGE_NAME_GENERATED_APP_INIT;
     }
 }
