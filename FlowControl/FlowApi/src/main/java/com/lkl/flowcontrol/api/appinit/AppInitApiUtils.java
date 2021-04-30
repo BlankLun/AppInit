@@ -30,7 +30,7 @@ public final class AppInitApiUtils {
     /**
      * 获取进程全名
      */
-    static String getProcessName() {
+    public static String getProcessName() {
         ActivityManager am = (ActivityManager) AppInitManager.get().getApplication().getSystemService(Context.ACTIVITY_SERVICE);
         if (am == null) {
             return "";

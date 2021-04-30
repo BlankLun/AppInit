@@ -6,6 +6,7 @@ import android.content.ComponentCallbacks2;
 import android.content.res.Configuration;
 import android.support.annotation.NonNull;
 
+import com.lkl.flowcontrol.api.Logger;
 import com.lkl.flowcontrol.common.FlowLogger;
 import com.lkl.flowcontrol.common.appinit.AppInitCallback;
 import com.lkl.flowcontrol.common.appinit.AppInitCommonUtils;

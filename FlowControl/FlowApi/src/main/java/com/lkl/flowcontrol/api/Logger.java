@@ -1,8 +1,10 @@
-package com.lkl.flowcontrol.api.appinit;
+package com.lkl.flowcontrol.api;
 
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.lkl.flowcontrol.api.appinit.AppInitApiUtils;
+import com.lkl.flowcontrol.api.appinit.AppInitManager;
 import com.lkl.flowcontrol.common.ILogger;
 
 /**
@@ -11,7 +13,7 @@ import com.lkl.flowcontrol.common.ILogger;
  * 描述:AppInit 打印 Android 日志
  */
 public class Logger implements ILogger {
-    private static final String TAG = "AppInit";
+    private static final String TAG = "FlowControl";
 
     @Override
     public boolean isDebug() {
@@ -25,7 +27,7 @@ public class Logger implements ILogger {
 
     @Override
     public void demo(String msg) {
-        d("AppInitDemo", msg);
+        d("FlowControlDemo", msg);
     }
 
     @Override
