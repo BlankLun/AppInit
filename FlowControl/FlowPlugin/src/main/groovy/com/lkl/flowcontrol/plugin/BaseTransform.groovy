@@ -28,7 +28,7 @@ import java.util.zip.ZipEntry
  * 描述:
  */
 abstract class BaseTransform extends Transform {
-    protected final Set<String> mExcludeJarSet = ["com.android.support", "android.arch.", "androidx."]
+    protected final Set<String> mExcludeJarSet = ["com.android.support", "android.arch.", "android.support.", "androidx.", "kotlinx.android."]
     protected static final SimpleDateFormat SDF = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
     protected final Project mProject
     protected GroovyClassLoader mUrlClassLoader

@@ -1,22 +1,22 @@
 package com.lkl.flowcontrol.plugin
 
-import com.lkl.flowcontrol.plugin.appinit.AppInitAsmTransform
 import com.lkl.flowcontrol.plugin.appinit.AppInitExtension
 import com.lkl.flowcontrol.common.FlowLogger
 import com.lkl.flowcontrol.common.ModuleConsts
 
 /**
- * 「app 初始化、多模块初始化」插件
+ * 「流程控制」插件
  */
 class FlowControlPlugin extends BaseAptPlugin {
-    private static final String VERSION_NAME = "1.0.6"
+    private static final String VERSION_NAME = "1.0.7"
 
     @Override
     protected void handleMasterModule() {
         FlowLogger.sLogger = new Logger(mProject)
+        // 创建plugin扩展配置
         mProject.extensions.create('appInit', AppInitExtension)
-
-        mProject.android.registerTransform(new AppInitAsmTransform(mProject))
+        // 注册流程控制执行的Transform
+        mProject.android.registerTransform(new FlowControlAsmTransform(mProject))
     }
 
     @Override

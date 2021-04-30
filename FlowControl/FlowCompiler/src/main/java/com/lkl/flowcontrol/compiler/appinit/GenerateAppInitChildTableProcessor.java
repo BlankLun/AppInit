@@ -18,7 +18,7 @@ import javax.lang.model.element.TypeElement;
  * 描述:生成 AppInit 字表
  */
 @SupportedOptions({ModuleConsts.APT_MODULE_COORDINATE_KEY, ModuleConsts.APT_DEPENDENCIES_KEY})
-@SupportedSourceVersion(SourceVersion.RELEASE_7)
+@SupportedSourceVersion(SourceVersion.RELEASE_8)
 public class GenerateAppInitChildTableProcessor extends BaseGenerateChildTableProcessor {
 
     @Override

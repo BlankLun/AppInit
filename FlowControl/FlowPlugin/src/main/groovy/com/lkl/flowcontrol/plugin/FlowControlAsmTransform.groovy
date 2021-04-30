@@ -1,11 +1,14 @@
-package com.lkl.flowcontrol.plugin.appinit
+package com.lkl.flowcontrol.plugin
 
 import com.lkl.flowcontrol.common.FlowLogger
 import com.lkl.flowcontrol.common.ModuleConsts
 import com.lkl.flowcontrol.common.appinit.AppInitCommonUtils
 import com.lkl.flowcontrol.common.appinit.AppInitItem
 import com.lkl.flowcontrol.common.appinit.ChildInitTable
-import com.lkl.flowcontrol.plugin.BaseAsmTransform
+import com.lkl.flowcontrol.plugin.appinit.AppInitExtension
+import com.lkl.flowcontrol.plugin.appinit.AppInitManagerAsmKnife
+import com.lkl.flowcontrol.plugin.appinit.ApplicationAsmKnife
+import com.lkl.flowcontrol.plugin.appinit.ChildInitTableSortUtils
 import org.gradle.api.Project
 import org.objectweb.asm.ClassWriter
 
@@ -16,7 +19,7 @@ import java.util.concurrent.CopyOnWriteArrayList
  * 创建时间:2018/11/18
  * 描述:
  */
-class AppInitAsmTransform extends BaseAsmTransform {
+class FlowControlAsmTransform extends BaseAsmTransform {
     private static final String CHILD_INIT_TABLE_ENTRY_NAME = convertCanonicalNameToEntryName(ModuleConsts.CHILD_INIT_TABLE_CANONICAL_NAME, false)
     private static final String APP_INIT_MANAGER_ENTRY_NAME = convertCanonicalNameToEntryName(ModuleConsts.APP_INIT_MANAGER_CANONICAL_NAME, false)
     private static final String APP_INIT_MANAGER_ENTRY_NAME_WITH_CLASS = convertCanonicalNameToEntryName(ModuleConsts.APP_INIT_MANAGER_CANONICAL_NAME, true)
@@ -30,23 +33,30 @@ class AppInitAsmTransform extends BaseAsmTransform {
     private List<String> mChildInitTableClassNameList
     private List<ChildInitTable> mChildInitTableList
 
-    AppInitAsmTransform(Project project) {
+    FlowControlAsmTransform(Project project) {
         super(project)
-        mAppInitLogDir = new File(mProject.buildDir, 'AppInitLog')
+        // 创建流程控制plugin运行时记录的日志文件所在目录
+        mAppInitLogDir = new File(mProject.buildDir, 'FlowControlLog')
         if (mAppInitLogDir.exists()) {
             mAppInitLogDir.delete()
         }
         mAppInitLogDir.mkdirs()
     }
 
+    /**
+     * Transform任务名称
+     *
+     * @return Transform任务名称
+     */
     @Override
     String getName() {
-        return "AppInit"
+        return "FlowControl"
     }
 
     @Override
     protected void beforeTransform() {
         super.beforeTransform()
+        // plugin配置项中获取明确指定的application实体类
         mAppInitExtension = mProject.extensions.findByType(AppInitExtension)
         if (!AppInitCommonUtils.isEmpty(mAppInitExtension.applicationCanonicalName)) {
             mApplicationEntryNameWithClass = convertCanonicalNameToEntryName(mAppInitExtension.applicationCanonicalName, true)
