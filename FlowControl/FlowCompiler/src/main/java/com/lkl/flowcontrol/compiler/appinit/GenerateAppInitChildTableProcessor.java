@@ -32,8 +32,8 @@ public class GenerateAppInitChildTableProcessor extends BaseGenerateChildTablePr
     }
 
     @Override
-    protected Class getAnnotationClass() {
-        return AppInit.class;
+    protected Class[] getAnnotationClass() {
+        return new Class[]{AppInit.class};
     }
 
     @Override

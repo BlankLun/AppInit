@@ -7,6 +7,7 @@ import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -65,42 +66,66 @@ public abstract class BaseGenerateChildTableProcessor extends AbstractProcessor 
     @Override
     public Set<String> getSupportedAnnotationTypes() {
         final Set<String> annotationTypes = new LinkedHashSet<>();
-        annotationTypes.add(getAnnotationClass().getCanonicalName());
+        for (Class annotationClass : getAnnotationClass()) {
+            annotationTypes.add(annotationClass.getCanonicalName());
+        }
         return annotationTypes;
     }
 
-    protected abstract Class getAnnotationClass();
+    protected abstract Class[] getAnnotationClass();
 
     @Override
     public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnv) {
-        String annotationSimpleName = getAnnotationClass().getSimpleName();
-        Set<? extends Element> childAnnotatedElementSet = roundEnv.getElementsAnnotatedWith(getAnnotationClass());
-        if (isElementNotEmpty(childAnnotatedElementSet)) {
-            info("===============> " + annotationSimpleName + " 不为空 START <===============");
-
-            MethodSpec.Builder constructorMethod = MethodSpec.constructorBuilder().addModifiers(Modifier.PUBLIC);
-
-            insertStatementBeforeAddItem(constructorMethod);
-
-            for (Element childAnnotatedElement : childAnnotatedElementSet) {
-                if (validateChildAnnotatedElement(childAnnotatedElement, annotationSimpleName)) {
-                    addItem((TypeElement) childAnnotatedElement, constructorMethod);
-                }
-            }
-
-            TypeSpec type = TypeSpec.classBuilder(mChildTablePrefix + getChildTableSuffix())
-                    .superclass(getChildTableSuperClassTypeName())
-                    .addModifiers(Modifier.PUBLIC)
-                    .addMethod(constructorMethod.build())
-                    .addJavadoc(mClassJavaDoc)
-                    .build();
-
-            generateClass(getGeneratedPackageName(), type);
-            info("===============> " + annotationSimpleName + " 不为空 END <===============");
+        Set<TypeElement> items = handleAnnotation(roundEnv);
+        if (isElementNotEmpty(items)) {
+            info("===============> items 不为空 START <===============");
+            generateTable(items);
+            info("===============> items 不为空 END <===============");
         } else {
-            info("===============> " + annotationSimpleName + " 为空 <===============");
+            info("===============> items 为空 <===============");
         }
         return true;
+    }
+
+    private Set<TypeElement> handleAnnotation(RoundEnvironment roundEnv) {
+        Set<TypeElement> items = new HashSet<>();
+        for (Class annotationClass : getAnnotationClass()) {
+            String annotationSimpleName = annotationClass.getSimpleName();
+            Set<? extends Element> childAnnotatedElementSet = roundEnv.getElementsAnnotatedWith(annotationClass);
+            if (isElementNotEmpty(childAnnotatedElementSet)) {
+                info("===============> " + annotationSimpleName + " 不为空 START <===============");
+                for (Element childAnnotatedElement : childAnnotatedElementSet) {
+                    if (validateChildAnnotatedElement(childAnnotatedElement, annotationSimpleName)) {
+                        items.add((TypeElement) childAnnotatedElement);
+                    }
+                }
+                info("===============> " + annotationSimpleName + " 不为空 END <===============");
+            } else {
+                info("===============> " + annotationSimpleName + " 为空 <===============");
+            }
+        }
+        return items;
+    }
+
+    private void generateTable(Set<? extends TypeElement> items) {
+        info("===============> generateTable START <===============");
+
+        MethodSpec.Builder constructorMethod = MethodSpec.constructorBuilder().addModifiers(Modifier.PUBLIC);
+        insertStatementBeforeAddItem(constructorMethod);
+
+        for (Element childAnnotatedElement : items) {
+            addItem((TypeElement) childAnnotatedElement, constructorMethod);
+        }
+
+        TypeSpec type = TypeSpec.classBuilder(mChildTablePrefix + getChildTableSuffix())
+                .superclass(getChildTableSuperClassTypeName())
+                .addModifiers(Modifier.PUBLIC)
+                .addMethod(constructorMethod.build())
+                .addJavadoc(mClassJavaDoc)
+                .build();
+
+        generateClass(getGeneratedPackageName(), type);
+        info("===============> generateTable 不为空 END <===============");
     }
 
     protected abstract void insertStatementBeforeAddItem(MethodSpec.Builder constructorMethod);
